@@ -6,6 +6,7 @@ var config = require('../../config')[env];
 var weatherUrl = config.weatherapi.baseUrl + `weather?units=${config.weatherapi.units}&APPID=${config.weatherapi.apikey}`;
 var forecastUrl = config.weatherapi.baseUrl + `forecast?units=${config.weatherapi.units}&APPID=${config.weatherapi.apikey}`;
 
+// get data from config url
 exports.weather_get = (req, res, next) => {
 
     axios
@@ -19,6 +20,7 @@ exports.weather_get = (req, res, next) => {
 
 };
 
+// get data from config url
 exports.forecast_get = (req, res, next) => {
 
     axios
